@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Putra | Pt</title>
+
+    <style>
+        body{
+            background-color: #f0f0f0;
+        }
+        .container{
+            background-color: 
+        }
+        .kotak{
+            border-color:  2px black solid;
+            width: 100%; 
+            height: 200px;
+        }
+        .col-md-9{
+            height: 350px;
+            background-color: #16525F;
+
+        }
+
+        h1{
+            font-size: 150px;
+            color: white;
+            background: -webkit-linear-gradient(#eee, #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media (max-width: 768px) { 
+            
+            .col-md-9{
+                width: 100%;
+            }
+         }
+    </style>
+
+</head>
+    <body> 
+        <script>
+             function cetak() {
+                 var ketik = document.getElementById("ketik").value ;
+                 document.getElementById("demo").innerHTML = "<b>" + ketik +"</b>";
+             }
+         </script>
+        <br><br><br><br>
+        <div class="d-flex justify-content-center">
+
+            <div class="col-md-9 p-4">
+
+                <div class="input-group">
+                    <input type="text" class="form-control"  id="ketik" autocomplete="off">
+                    <button type="button" onclick="cetak()" class="btn btn-primary">Jalankan</button>
+                </div>
+                    
+                
+                <br>
+                
+                <div class="kotak bg-dark">
+
+                
+                        <marquee class="d-flex align-items-center p-0" scrollamount="45"> 
+                            <strong> 
+                                <h1 id="demo" class="text-center text-uppercase">
+                                   
+                                </h1>
+                            </strong>
+                        </marquee>
+         
+                    
+                </div>
+                <small class="d-flex justify-content-center p-4">CopyRight&copy; Pt 2021</small>
+                   
+                
+                
+            </div> 
+
+
+            
+        </div>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
