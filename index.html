@@ -14,9 +14,7 @@
         body{
             background-color: #f0f0f0;
         }
-        .container{
-            background-color: 
-        }
+        
         .kotak{
             border-color:  2px black solid;
             width: 100%; 
@@ -46,49 +44,53 @@
 
 </head>
     <body> 
-        <script>
-             function cetak() {
-                 var ketik = document.getElementById("ketik").value ;
-                 document.getElementById("demo").innerHTML = "<b>" + ketik +"</b>";
-             }
-         </script>
         <br><br><br><br>
-        <div class="d-flex justify-content-center">
 
-            <div class="col-md-9 p-4">
+        <div id="app">
+            <div class="d-flex justify-content-center">
 
-                <div class="input-group">
-                    <input type="text" class="form-control"  id="ketik" autocomplete="off">
-                    <button type="button" onclick="cetak()" class="btn btn-primary">Jalankan</button>
-                </div>
+                <div class="col-md-9 p-4">
+
+                    <div class="input-group">
+                        <input type="text" v-model="input" placeholder="Masukan Kata Kata Mu!!" class="form-control text-center" autocomplete="off">
+                    </div>
+                        
                     
-                
-                <br>
-                
-                <div class="kotak bg-dark">
-
-                
-                        <marquee class="d-flex align-items-center p-0" scrollamount="45"> 
-                            <strong> 
-                                <h1 id="demo" class="text-center text-uppercase">
-                                   
-                                </h1>
-                            </strong>
-                        </marquee>
-         
+                    <br>
                     
-                </div>
-                <small class="d-flex justify-content-center p-4">CopyRight&copy; Pt 2021</small>
-                   
-                
-                
-            </div> 
+                    <div class="kotak bg-dark">
 
+                    
+                            <marquee class="d-flex align-items-center p-0" scrollamount="45"> 
+                                <strong> 
+                                    <h1 class="text-center text-uppercase">
+                                       {{ input }}
+                                    </h1>
+                                </strong>
+                            </marquee>
+             
+                        
+                    </div>
+                    <small class="d-flex justify-content-center p-4">CopyRight&copy; Pt 2021</small>
+                       
+                </div> 
 
             
+            </div>
         </div>
+        
     
 
+    <!-- vue js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+       const vm = new Vue({
+            el: '#app',
+            data: {
+                input: ''
+            }
+        })
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
